@@ -87,5 +87,5 @@ if __name__ == "__main__":
     forest_plot(ax, labels, ors, ci_low, ci_high, p_vals,
                 x_ticks=[0.5, 1.0, 1.5, 2.0],
                 title="图4 生育意愿影响因素的 Logit 回归森林图")
-    save_fig(fig, "图4_森林图")
+    save_fig(fig, "森林图")
     plt.show()

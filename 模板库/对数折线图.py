@@ -60,5 +60,5 @@ if __name__ == "__main__":
                    xlabel="年份 (年)", ylabel="数值 (亿元, 对数坐标)",
                    title="图2 经济指标变化趋势",
                    shade=(2005, 2008))    # 突出 2005-2008 区间
-    save_fig(fig, "图2_多系列对数折线")
+    save_fig(fig, "对数折线图")
     plt.show()

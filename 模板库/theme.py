@@ -6,6 +6,7 @@ theme.py —— 数模作图模板库：全局色板与主题加载
     use_theme('journal')   # 或 'minimal'，全队统一选一套
 """
 from pathlib import Path
+import inspect
 
 import matplotlib.pyplot as plt
 from cycler import cycler
@@ -70,10 +71,14 @@ def _grid(ax):
         ax.grid(True, ls="--", alpha=0.3)
 
 
-def save_fig(fig, name, dpi=300, outdir="figures"):
-    """按规范同时输出 PDF（排版用）和 PNG（预览用）。
-    name 建议 '图N_短描述'，如 save_fig(fig, "图1_GDP趋势")
+def save_fig(fig, name, dpi=300, outdir=None):
+    """同时输出 PDF（排版用）和 PNG（预览用）。
+    name：文件名（建议与代码文件同名，如 折线图.py → '折线图'）
+    outdir：输出目录；默认 None = 自动保存到**调用方脚本所在目录**（代码与图放一起）
     """
+    if outdir is None:
+        frame = inspect.stack()[1]
+        outdir = Path(frame.filename).resolve().parent
     out = Path(outdir)
     out.mkdir(parents=True, exist_ok=True)
     fig.savefig(out / f"{name}.pdf")

@@ -72,5 +72,5 @@ if __name__ == "__main__":
                fill=(0, 14),            # 填充两点之间的阴影
                y_fmt=lambda v: f"{v:,.1f}",
                x_ticks=np.arange(2000, 2015, 2))
-    save_fig(fig, "图1_GDP趋势")
+    save_fig(fig, "折线图")
     plt.show()

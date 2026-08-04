@@ -110,5 +110,5 @@ if __name__ == "__main__":
                     fill_low="α=0.10", fill_high="α=0.30",
                     zoom=(2033.3, 2034.7, y_lo, y_hi),   # 放大末尾两年
                     aspect=0.65)                          # 画布纵横比优化
-    save_fig(fig, "图3_灵敏度分析")
+    save_fig(fig, "灵敏度分析图")
     plt.show()
