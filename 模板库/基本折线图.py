@@ -1,20 +1,8 @@
-![img.png](../模板库/参考_对数折线图.png)
-
-- Prompt
-用Python Matplotlib+Pandas绘制**学术极简风多系列时间序列折线图**，严格遵循以下要求：
-1. 数据处理：读取数据
-2. 核心样式：
-   - 多组折线并行绘制，自定义专属配色、统一线宽
-   - Y轴设置为**对数坐标(log)**，适配数值跨度大的经济/时序数据
-   - 绘制指定年份/时间区间的垂直阴影填充（低透明度），突出分析区间
-3. 图表规范：
-   - 中文正常显示（黑体SimHei），负号正常显示
-   - 隐藏顶部、右侧边框，仅保留水平网格线
-   - 图例左上角排列、双列展示，简洁不拥挤
-4. 布局：自动紧凑布局，高清输出，代码带注释、可直接运行
-5. 自定义项：折线颜色、指标列名、阴影填充区间、对数坐标开关
-
-```pycon
+# -*- coding: utf-8 -*-
+"""
+【提取自 学习笔记/基本折线图.md】学术简洁风时间序列折线图（多系列 + 对数坐标）
+配套数据：data.csv（示例，可替换）；参考图：参考_折线图.png
+"""
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import pandas as pd
@@ -44,5 +32,3 @@ if __name__ == "__main__":
     create_chart(ax)
     plt.tight_layout()
     plt.show()
-
-```

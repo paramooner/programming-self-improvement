@@ -1,22 +1,9 @@
-![alt text](../模板库/参考_灵敏度分析图.png)
-
-- Prompt
-1. 核心功能：
-   - 数据做**三次样条插值平滑**
-   - 主图右下角嵌入**局部放大子图(inset)**，用mark_inset绘制灰色虚线连接线
-   - 填充适当参数之间的区间阴影（低透明度）
-2. 固定配色（必须保留）：
-  选取合适颜色 - α=0.10: #d9b3ff（浅紫）、α=0.20: #a23b72（中紫/基准加粗）、α=0.30: #4b0082（深紫）
-   - S0基准线：#474747（深灰虚线）
-3. 图表样式：
-   - 中文黑体+Times New Roman，负号正常，PDF兼容格式
-   - 虚线网格、坐标轴刻度向内、顶部右侧刻度开启
-   - 子图自定义坐标范围，小图刻度缩小，无框图例
-   - 标题：(a) TFR 对意愿调整速度 α 的敏感性，加粗字体
-4. 线条规范：基准α=0.20线条加粗(3)，其余细线(1.5)，基准场景虚线
-5. 输出：高清绘图，代码可直接运行
-
-```py
+# -*- coding: utf-8 -*-
+"""
+【提取自 学习笔记/局部放大图.md】TFR 对意愿调整速度 α 的敏感性分析
+样条平滑 + 局部放大 inset + 参数区间阴影（紫色渐变专属色系）
+参考图：参考_灵敏度分析图.png
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
@@ -134,12 +121,9 @@ def plot_tfr_sensitivity_only():
 
     # 保存与显示
     plt.tight_layout()
-    plt.savefig('SD_图a_TFR敏感性_独立版.png', dpi=300, bbox_inches='tight')
+    plt.savefig('局部放大图.png', dpi=300, bbox_inches='tight')
     plt.show()
 
 # ===================== 执行 =====================
 if __name__ == '__main__':
     plot_tfr_sensitivity_only()
-
-
-```
