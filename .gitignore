@@ -1,0 +1,12 @@
+# IDE 配置
+.idea/
+
+# Reasonix 工具数据
+.reasonix/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 临时文件
+*.tmp
