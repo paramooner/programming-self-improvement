@@ -1,0 +1,43 @@
+## ============ 公共基础样式 ============
+## 字体：中文黑体，西文 Times New Roman
+font.family: sans-serif
+font.sans-serif: SimHei, Times New Roman, Arial
+axes.unicode_minus: False
+
+## 线条与标记
+lines.linewidth: 2.0
+lines.markersize: 6
+lines.markeredgewidth: 1.0
+
+## 坐标轴与文字字号
+axes.linewidth: 1.0
+axes.labelsize: 11
+axes.titlesize: 13
+axes.titleweight: bold
+xtick.labelsize: 10
+ytick.labelsize: 10
+xtick.major.width: 1.0
+ytick.major.width: 1.0
+
+## 图例：无边框，不遮数据（位置在代码里按需指定）
+legend.fontsize: 10
+legend.frameon: False
+legend.handlelength: 2.0
+
+## 颜色循环：由 theme.use_theme() 统一设置（style 文件中的 # 会被当作注释）
+
+## 输出
+figure.dpi: 100
+savefig.dpi: 300
+savefig.bbox: tight
+savefig.facecolor: white
+
+## ============ 极简风（minimal）专属 ============
+## 隐藏上/右边框，仅水平网格线（浅灰实线；网格由 theme._grid() 按主题控制）
+axes.spines.top: False
+axes.spines.right: False
+axes.grid: False
+grid.linestyle: -
+grid.color: "#dddddd"
+grid.alpha: 0.6
+grid.linewidth: 0.8
