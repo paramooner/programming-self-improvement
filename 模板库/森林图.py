@@ -107,5 +107,5 @@ ax.set_xlim(x_var - 0.1, x_pval + 0.1)
 ax.set_ylim(line_bot - 0.8, line_top + 0.5)
 
 plt.tight_layout()
-plt.savefig('森林图.png', dpi=300, bbox_inches='tight')
+plt.savefig('森林图_输出.png', dpi=300, bbox_inches='tight')
 plt.show()

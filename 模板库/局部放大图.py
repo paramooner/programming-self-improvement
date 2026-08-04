@@ -121,7 +121,7 @@ def plot_tfr_sensitivity_only():
 
     # 保存与显示
     plt.tight_layout()
-    plt.savefig('局部放大图.png', dpi=300, bbox_inches='tight')
+    plt.savefig('局部放大图_输出.png', dpi=300, bbox_inches='tight')
     plt.show()
 
 # ===================== 执行 =====================
